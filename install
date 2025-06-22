@@ -1,0 +1,23 @@
+#!/bin/bash
+set -e
+
+DOTFILES_DIR="$HOME/dotfiles"
+
+echo "Symlinking common dotfiles..."
+
+for file in .bashrc .zshrc .vimrc .gitconfig; do
+    ln -sf "$DOTFILES_DIR/$file" "$HOME/$file"
+done
+
+# Detect OS
+OS="$(uname)"
+if [ "$OS" = "Darwin" ]; then
+    echo "Setting up for macOS..."
+    ln -sf "$DOTFILES_DIR/mac/.macos" "$HOME/.macos"
+elif [ "$OS" = "Linux" ]; then
+    echo "Setting up for Linux..."
+    ln -sf "$DOTFILES_DIR/linux/.linuxrc" "$HOME/.linuxrc"
+fi
+
+echo "Done."
+
