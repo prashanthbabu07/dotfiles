@@ -27,3 +27,7 @@ fastfetch
 # ALIAS's
 alias ll='ls -la'
 
+
+# History settings
+HISTSIZE=10000
+HISTFILESIZE=10000000
