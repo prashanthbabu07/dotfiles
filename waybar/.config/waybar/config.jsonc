@@ -5,7 +5,7 @@
     // add display brightness module
   "modules-right": ["network", "pulseaudio", "battery", "", "clock"],
   "clock": {
-    "format": "<span foreground='#ffffff'>   </span>{:%a %d %H:%M}",
+    "format": "<span foreground='#ffffff'>   </span>{:%a %d %I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
