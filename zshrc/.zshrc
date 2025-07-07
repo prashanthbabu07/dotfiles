@@ -3,8 +3,9 @@ precmd() { vcs_info }
 # # Set git branch format
 zstyle ':vcs_info:git:*' formats ' → (%b)'
 setopt PROMPT_SUBST
+ZSH_RED_PROMPT="%F{#FF5F5F}"
 # PROMPT='%B%F{green}%n%f%F{blue} → %1~%f%b%B%F{red}${vcs_info_msg_0_}%f%b %B%F{magenta}→%f%b '
-PROMPT='%B%F{green}%n%f%F{blue} → %1~%f%b%B%F{196}${vcs_info_msg_0_}%f%b %B%F{magenta}→%f%b '
+PROMPT='%B%F{green}%n%f%F{blue} → %1~%f%b%B%F{red}${vcs_info_msg_0_}%f%b %B%F{magenta}→%f%b '
 
 
 #PS1
