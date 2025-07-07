@@ -40,7 +40,7 @@ fi
 # start ssh-agent if not already running using systemctl user
 
 if command -v systemctl >/dev/null 2>&1; then
-    if ! systemctl --user is-active ssh-agent.service >/dev/null 2>&1; then
+    if ! systemctl --user is-active ssh-agent.service >/dev/null 3>&1; then
         systemctl --user start ssh-agent.service
     fi
 else
