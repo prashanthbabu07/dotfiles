@@ -6,7 +6,13 @@
   "modules-right": ["network", "pulseaudio", "battery", "cpu", "memory", "clock"],
   "clock": {
     "format": "<span foreground='#ffffff'>   </span>{:%a %d %I:%M %p}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        // "tooltip-format": "<span>{calendar}</span>",
+        "calendar": {
+            "format": {
+                "today": "<span color='#ffcc66'><b>{}</b></span>"
+            }
+        }
   },
     "custom/archicon": {
     "format": "<span size='11000' foreground='#1793d1'>  </span>",
