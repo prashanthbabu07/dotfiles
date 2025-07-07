@@ -31,3 +31,21 @@ alias ll='ls -la'
 # History settings
 HISTSIZE=10000
 HISTFILESIZE=10000000
+
+# completion settings
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+fi
+
+# start ssh-agent if not already running using systemctl user
+
+if command -v systemctl >/dev/null 2>&1; then
+    if ! systemctl --user is-active ssh-agent.service >/dev/null 2>&1; then
+        systemctl --user start ssh-agent.service
+    fi
+else
+    echo "systemctl command not found, skipping ssh-agent service check."
+fi
+# if [ -z "$SSH_AUTH_SOCK" ]; then
+#     eval "$(ssh-agent -s)"
+# fi
