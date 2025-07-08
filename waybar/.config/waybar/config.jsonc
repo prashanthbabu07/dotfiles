@@ -1,59 +1,65 @@
 {
-  "position": "top",
-  "modules-left": ["custom/archicon", "hyprland/workspaces"],
-  // "modules-center": ["hyprland/window"],
+    "position": "top",
+    "modules-left": ["custom/archicon", "hyprland/workspaces"],
+    // "modules-center": ["hyprland/window"],
     // add display brightness module
-  "modules-right": ["network", "pulseaudio", "battery", "cpu", "memory", "clock"],
-  "clock": {
-    "format": "<span foreground='#ffffff'>   </span>{:%a %d %I:%M %p}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery",
+        "cpu",
+        "memory",
+        "clock",
+    ],
+    "clock": {
+        "format": "<span>   </span>{:%a %d %I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
             "format": {
-                "today": "<span color='#ffcc66'><b>{}</b></span>"
-            }
-        }
-  },
+                "today": "<span color='#ffcc66'><b>{}</b></span>",
+            },
+        },
+    },
     "custom/archicon": {
-    "format": "<span size='11000' foreground='#1793d1'>  </span>",
-    "tooltip": false,
-    "on-click": "wofi --show drun"
-},
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
+        "format": "<span size='11000' foreground='#1793d1'>  </span>",
+        "tooltip": false,
+        "on-click": "wofi --show drun",
     },
-    "format": "<span size='13000' foreground='#ffffff'>{icon} </span> {capacity}%",
-    "format-warning": "<span size='13000' foreground='#ffffff'>{icon} </span> {capacity}%",
-    "format-critical": "<span size='13000' foreground='#ffffff'>{icon} </span> {capacity}%",
-    "format-charging": "<span size='12000' foreground='#ffffff'> </span>{capacity}%",
-    "format-plugged": "<span size='12000' foreground='#ffffff'> </span>{capacity}%",
-    "format-alt": "<span size='13000' foreground='#ffffff'>{icon} </span> {time}",
-    "format-full": "<span size='12000' foreground='#ffffff'> </span>{capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "tooltip-format": "{time}"
-  },
-  "network": {
-    "format-wifi": "<span size='10240' foreground='#ffffff'> </span>",
-    "format-ethernet": "<span size='10240' foreground='#ffffff'>󰤭 </span> Disconnected",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='10240' foreground='#ffffff'> </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
-  },
-  "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-muted": "",
-      "format-icons": {
-          "default": ["  ", "  ", "  "]
-      },
-      "on-click": "pavucontrol"
-  },
-  "cpu": {
-        "format": "<span size='10240'> </span> {usage}%" // Example: displays an icon and CPU usage percentage
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15,
+        },
+        "format": "<span size='13000'>{icon} </span> {capacity}%",
+        "format-warning": "<span size='13000'>{icon} </span> {capacity}%",
+        "format-critical": "<span size='13000'>{icon} </span> {capacity}%",
+        "format-charging": "<span size='12000'> </span>{capacity}%",
+        "format-plugged": "<span size='12000'> </span>{capacity}%",
+        "format-alt": "<span size='13000'>{icon} </span> {time}",
+        "format-full": "<span size='12000'> </span>{capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format": "{time}",
     },
-        "memory": {
-        "format": "<span size='10240'> </span> {used}GB/{total}GB" // Example: displays used and total RAM in GB
-    }
-     
+    "network": {
+        "format-wifi": "<span size='10240'> </span>",
+        "format-ethernet": "<span size='10240'>󰤭 </span> Disconnected",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "<span size='10240'> </span>Disconnected",
+        "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["  ", "  ", "  "],
+        },
+        "on-click": "pavucontrol",
+    },
+    "cpu": {
+        "format": "<span size='10240'> </span> {usage}%", // Example: displays an icon and CPU usage percentage
+    },
+    "memory": {
+        "format": "<span size='10240'> </span> {used}GB/{total}GB", // Example: displays used and total RAM in GB
+    },
 }
