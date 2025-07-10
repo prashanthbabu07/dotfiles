@@ -6,13 +6,22 @@
     "modules-right": [
         "network",
         "pulseaudio",
+        "backlight",
         "battery",
         "cpu",
         "memory",
         "clock",
     ],
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "<span size='13000'>{icon}</span>  {percent}%",
+        // "format-icons": ["", ""],
+        "tooltip": false,
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+    },
+
     "clock": {
-        "format": "<span>   </span>{:%a %d %I:%M %p}",
+        "format": "<span> </span> {:%a %d %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
@@ -31,12 +40,12 @@
             "warning": 30,
             "critical": 15,
         },
-        "format": "<span size='13000'>{icon} </span> {capacity}%",
-        "format-warning": "<span size='13000'>{icon} </span> {capacity}%",
-        "format-critical": "<span size='13000'>{icon} </span> {capacity}%",
+        "format": "<span size='13000'>{icon}</span> {capacity}%",
+        "format-warning": "<span size='13000'>{icon}</span> {capacity}%",
+        "format-critical": "<span size='13000'>{icon}</span> {capacity}%",
         "format-charging": "<span size='12000'> </span>{capacity}%",
         "format-plugged": "<span size='12000'> </span>{capacity}%",
-        "format-alt": "<span size='13000'>{icon} </span> {time}",
+        "format-alt": "<span size='13000'>{icon}</span> {time}",
         "format-full": "<span size='12000'> </span>{capacity}%",
         "format-icons": ["", "", "", "", ""],
         "tooltip-format": "{time}",
@@ -49,7 +58,7 @@
         "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
         "format-muted": "",
         "format-icons": {
             "default": ["  ", "  ", "  "],
