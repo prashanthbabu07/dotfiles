@@ -52,7 +52,7 @@ button:hover {
     /* background-color: rgba(0, 0, 0, 0.3); */
     color: @archblue;
     font-weight: bold;
-    /* border-top: 2px solid @mauve; */
+    /* border-bottom: 2px solid @mauve; */
 }
 
 #workspaces button.urgent {
@@ -129,4 +129,27 @@ button:hover {
     border-radius: 15px;
     padding-left: 6px;
     padding-right: 6px;
+}
+
+#bluetooth {
+    /* background-color: #268bd2; */
+    color: #000000;
+    padding: 0 10px;
+}
+
+#bluetooth.disabled {
+    color: #dc322f; /* Red for disabled */
+}
+
+#bluetooth.off {
+    color: #b58900; /* Yellow for off */
+}
+
+#bluetooth.on {
+    color: @archblue; /* Green for on */
+    font-weight: bold;
+}
+
+#bluetooth.connected {
+    color: #6c71c4; /* Purple for connected */
 }
