@@ -120,8 +120,12 @@ button:hover {
 }
 
 #network {
-    /* color: @yellow; */
-    /* border-bottom: 2px solid @yellow; */
+    background-color: @base;
+    color: #cccccc;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 15px;
+    margin: 0 1px;
 }
 
 #idle_inhibitor {
