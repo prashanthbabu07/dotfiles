@@ -82,6 +82,15 @@ button:hover {
     padding-right: 4px;
 }
 
+#backlight {
+    background-color: @base;
+    color: @blue;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 15px;
+    margin: 0 1px;
+}
+
 #cpu {
     background-color: @base;
     color: @archblue;
