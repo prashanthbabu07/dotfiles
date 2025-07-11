@@ -102,8 +102,12 @@ button:hover {
 }
 
 #pulseaudio {
-    /* color: @blue; */
-    /* border-bottom: 2px solid @blue; */
+    background-color: @base;
+    color: @archblue;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 15px;
+    margin: 0 1px;
 }
 
 #network {
