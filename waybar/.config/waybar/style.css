@@ -133,23 +133,23 @@ button:hover {
 
 #bluetooth {
     /* background-color: #268bd2; */
-    color: #000000;
+    color: #ffffff;
     padding: 0 10px;
 }
 
 #bluetooth.disabled {
-    color: #dc322f; /* Red for disabled */
+    color: @red; /* Red for disabled */
 }
 
 #bluetooth.off {
-    color: #b58900; /* Yellow for off */
+    color: @yellow; /* Yellow for off */
 }
 
 #bluetooth.on {
-    color: @archblue; /* Green for on */
+    color: @blue; /* Green for on */
     font-weight: bold;
 }
 
 #bluetooth.connected {
-    color: #6c71c4; /* Purple for connected */
+    color: @rosewater; /* Purple for connected */
 }

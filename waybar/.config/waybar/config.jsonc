@@ -22,9 +22,9 @@
     },
     "bluetooth": {
         "format": "<span size='12000'></span> {status}",
-        "format-disabled": "<span size='12000'></span> Off",
-        "format-off": "<span size='12000'></span> Off",
-        "format-on": "<span size='12000'></span> On",
+        "format-disabled": "<span size='12000'></span> OFF",
+        "format-off": "<span size='12000'></span> OFF",
+        "format-on": "<span size='12000'></span> ON",
         "on-click": "blueman-manager", // Opens Blueman manager on click
         // "on-click-right": "bluetoothctl power toggle", // Toggles Bluetooth power on right click
         "on-click-right": "bash -c 'bluetoothctl power status | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on'",
