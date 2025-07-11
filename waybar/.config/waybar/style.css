@@ -22,8 +22,10 @@ window#waybar {
 
 #window {
     margin: 2px;
+    /* padding: 8; */
     padding-left: 8;
     padding-right: 8;
+    /* padding: 10px; */
 }
 
 button {
@@ -80,6 +82,15 @@ button:hover {
     padding-right: 4px;
 }
 
+#cpu {
+    background-color: @base;
+    color: @archblue;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 15px;
+    margin: 0 1px;
+}
+
 #clock {
     /* color: @maroon; */
     /* border-bottom: 2px solid @maroon; */
@@ -110,6 +121,11 @@ button:hover {
 }
 
 #battery {
+    border-radius: 15px;
+    color: @archblue;
+    background-color: @base;
+    padding: 0 10px;
+    font-weight: bold;
     /* color: @green; */
     /* border-bottom: 2px solid @green; */
 }
@@ -132,9 +148,12 @@ button:hover {
 }
 
 #bluetooth {
-    /* background-color: #268bd2; */
+    background-color: @base;
     color: #ffffff;
     padding: 0 10px;
+    border-radius: 15px;
+    margin: 0 1px;
+    font-weight: bold;
 }
 
 #bluetooth.disabled {
@@ -146,8 +165,7 @@ button:hover {
 }
 
 #bluetooth.on {
-    color: @blue; /* Green for on */
-    font-weight: bold;
+    color: @archblue; /* Green for on */
 }
 
 #bluetooth.connected {

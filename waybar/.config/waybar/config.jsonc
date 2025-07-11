@@ -49,7 +49,7 @@
             "warning": 30,
             "critical": 15,
         },
-        "format": "<span size='13000'>{icon} </span> {capacity}%",
+        "format": "<span size='12000'>{icon}</span> {capacity}%",
         "format-warning": "<span size='13000'>{icon} </span> {capacity}%",
         "format-critical": "<span size='13000'>{icon} </span> {capacity}%",
         "format-charging": "<span size='12000'> </span>{capacity}%",
