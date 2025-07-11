@@ -126,6 +126,7 @@ button:hover {
     background-color: @base;
     padding: 0 10px;
     font-weight: bold;
+    margin: 0 1px;
     /* color: @green; */
     /* border-bottom: 2px solid @green; */
 }
