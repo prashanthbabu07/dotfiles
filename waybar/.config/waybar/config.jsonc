@@ -27,10 +27,10 @@
         "format-on": "<span size='12000'></span> ON",
         "on-click": "blueman-manager", // Opens Blueman manager on click
         // "on-click-right": "bluetoothctl power toggle", // Toggles Bluetooth power on right click
-        "on-click-right": "bash -c 'bluetoothctl power status | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on'",
+        // "on-click-right": "bash -c 'bluetoothctl power status | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on'",
     },
     "clock": {
-        "format": "<span> </span> {:%a %d %I:%M %p}",
+        "format": "{:%a %d %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
