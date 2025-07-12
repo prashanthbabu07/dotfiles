@@ -12,6 +12,7 @@
         "cpu",
         "memory",
         "clock",
+        "custom/power",
     ],
     "backlight": {
         "device": "intel_backlight",
@@ -79,5 +80,11 @@
     },
     "memory": {
         "format": "<span size='10240'> </span><span>{used}GB</span>/{total}GB", // Example: displays used and total RAM in GB
+    },
+    "custom/power": {
+        "format": "<span size='14000'>⏻</span>",
+        "tooltip": "Power Menu",
+        "on-click": "~/.config/waybar/scripts/power_menu.sh",
+        "interval": 3600,
     },
 }

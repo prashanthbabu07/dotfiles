@@ -103,7 +103,7 @@ button:hover {
     padding: 0 10px;
     border-radius: 15px;
     margin: 0 1px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
 }
 
 #memory {
@@ -122,6 +122,16 @@ button:hover {
     padding: 0 10px;
     border-radius: 15px;
     margin: 0 1px;
+}
+
+#custom-power {
+    background-color: @base;
+    color: @archblue;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 15px;
+    margin: 0 1px;
+    margin-right: 5px;
 }
 
 /* #clock { */
