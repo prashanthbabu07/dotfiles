@@ -91,6 +91,22 @@ button:hover {
     margin: 0 1px;
 }
 
+#memory {
+    background-color: @base;
+    color: @archblue;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 15px;
+    margin: 0 1px;
+}
+
+.mem-used {
+    color: #ff5555;
+}
+.mem-total {
+    color: #55ff55;
+}
+
 #cpu {
     background-color: @base;
     color: @archblue;

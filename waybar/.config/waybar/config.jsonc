@@ -49,7 +49,7 @@
             "warning": 30,
             "critical": 15,
         },
-        "format": "<span size='12000'>{icon}</span>{capacity}%",
+        "format": "<span size='12000'>{icon} </span>{capacity}%",
         "format-warning": "<span size='13000'>{icon} </span> {capacity}%",
         "format-critical": "<span size='13000'>{icon} </span> {capacity}%",
         "format-charging": "<span size='11000'> </span>{capacity}%",
@@ -67,7 +67,7 @@
         "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
     },
     "pulseaudio": {
-        "format": "<span size='11000'>{icon} </span> {volume}%",
+        "format": "<span size='11000'>{icon} </span>{volume}%",
         "format-muted": "",
         "format-icons": {
             "default": ["", "", ""],
@@ -78,6 +78,6 @@
         "format": "<span size='10240'> </span>{usage}%", // Example: displays an icon and CPU usage percentage
     },
     "memory": {
-        "format": "<span size='10240'> </span> {used}GB/{total}GB", // Example: displays used and total RAM in GB
+        "format": "<span size='10240'> </span><span>{used}GB</span>/{total}GB", // Example: displays used and total RAM in GB
     },
 }
