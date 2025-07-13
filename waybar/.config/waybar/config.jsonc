@@ -65,7 +65,7 @@
         "format-ethernet": "<span size='10240'>󰤭 </span> Disconnected",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "<span size='10240'> </span>Disconnected",
-        "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+        "tooltip-format-wifi": "Signal Strenght: {signalStrength}%\n {ipaddr}",
     },
     "pulseaudio": {
         "format": "<span size='11000'>{icon} </span>{volume}%",
