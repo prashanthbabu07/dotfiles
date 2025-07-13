@@ -50,6 +50,7 @@ alias ll='ls -al'
 
 # Add .NET Core SDK tools
 export PATH="$PATH:/Users/prashanth/.dotnet/tools"
-
-
 export PATH="/usr/local/sbin:$PATH"
+
+# add mason bin to PATH
+export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
