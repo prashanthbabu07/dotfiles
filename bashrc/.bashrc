@@ -49,3 +49,6 @@ fi
 if [ -z "$SSH_AUTH_SOCK" ]; then
     eval "$(ssh-agent -s)"
 fi
+
+# Add mason to PATH for mason package manager
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
