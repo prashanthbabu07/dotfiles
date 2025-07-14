@@ -53,13 +53,14 @@ button:hover {
 #workspaces button {
     padding: 0 4px;
     /* background-color: rgba(0, 0, 0, 0.6); */
-    /* border-radius: 15px; */
+    border-radius: 15px;
 }
 
 #workspaces button.focused {
     /* background-color: rgba(0, 0, 0, 0.3); */
-    color: @rosewater;
+    /* color: @rosewater; */
     /* border-top: 2px solid @rosewater; */
+    /* border-radius: 15px; */
 }
 
 #workspaces button.active {
