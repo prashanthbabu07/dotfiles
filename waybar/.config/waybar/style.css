@@ -45,8 +45,15 @@ button:hover {
     /* border-top: 2px solid @mauve; */
 }
 
+#workspaces {
+    /* background-color: @base; */
+    /* border-radius: 15px; */
+}
+
 #workspaces button {
     padding: 0 4px;
+    /* background-color: @base; */
+    /* border-radius: 15px; */
 }
 
 #workspaces button.focused {
@@ -56,9 +63,11 @@ button:hover {
 }
 
 #workspaces button.active {
-    /* background-color: rgba(0, 0, 0, 0.3); */
+    background-color: rgba(0, 0, 0, 0.3);
     color: @archblue;
     font-weight: bold;
+    border-radius: 15px;
+    /* background-color:  */
     /* border-bottom: 2px solid @mauve; */
 }
 
@@ -121,6 +130,11 @@ button:hover {
     /* padding: 0 10px; */
     border-radius: 15px;
     margin: 0 1px;
+}
+
+#custom-archicon {
+    margin-right: 15px;
+    font-weight: bold;
 }
 
 #custom-power {

@@ -14,6 +14,11 @@
         "clock",
         "custom/power",
     ],
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": [2, 3, 4, 5]
+        }
+    },
     "backlight": {
         "device": "intel_backlight",
         "format": "<span size='13000'>{icon} </span>{percent}%",
