@@ -10,9 +10,9 @@
 
 
 # Use this config when inside any repo under ~/work/
-[includeIf "gitdir:~/theorem-digital/"]
-    path = ~/.dotfiles/.gitconfig-work
+[includeIf "gitdir:/Volumes/Sandisk/Projects/theorem/"]
+    path = ~/dotfiles/zshrc/.gitconfig-work
 
 # Use this config when inside any repo under ~/personal/
-[includeIf "gitdir:~/prashanthbabu07/"]
-    path = ~/.dotfiles/.gitconfig-personal
+; [includeIf "gitdir:~/prashanthbabu07/"]
+;     path = ~/.gitconfig-personal
