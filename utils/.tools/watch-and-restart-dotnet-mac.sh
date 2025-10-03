@@ -2,7 +2,7 @@
 
 PORT=${2:-5093}        # Port to kill (default 5093 if not passed)
 RUN_PATH="$1"          # Directory where dotnet run will be executed
-DEBOUNCE=2             # Seconds to wait after a change before restarting
+DEBOUNCE=1
 
 if [[ -z "$RUN_PATH" ]]; then
     echo "Usage: $0 <dotnet_run_path> [port]"
@@ -18,9 +18,12 @@ kill_dotnet_port() {
 }
 
 restart_dotnet_run() {
+    echo "Starting dotnet run in $RUN_PATH"
     kill_dotnet_port
     (cd "$RUN_PATH" && dotnet run) &
     RUN_PID=$!
+    echo "dotnet run started with PID $RUN_PID"
+    echo "Last start time: $(date '+%Y-%m-%d %H:%M:%S')"
 }
 
 # Initial start

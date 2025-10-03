@@ -1,10 +1,11 @@
 #!/bin/zsh
 
-DEBOUNCE=2      # Seconds to wait after a change before rebuilding
+DEBOUNCE=1      # Seconds to wait after a change before rebuilding
 
 build_dotnet_no_incremental() {
     echo "Running: dotnet build --no-incremental"
     dotnet build --no-incremental
+    echo "Last build time: $(date '+%Y-%m-%d %H:%M:%S')"
 }
 
 # Initial build
