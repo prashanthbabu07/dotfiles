@@ -20,7 +20,7 @@ kill_dotnet_port() {
 restart_dotnet_run() {
     echo "Starting dotnet run in $RUN_PATH"
     kill_dotnet_port
-    (cd "$RUN_PATH" && dotnet run) &
+    (cd "$RUN_PATH" && dotnet run --no-increment) &
     RUN_PID=$!
     echo "dotnet run started with PID $RUN_PID"
     echo "Last start time: $(date '+%Y-%m-%d %H:%M:%S')"
