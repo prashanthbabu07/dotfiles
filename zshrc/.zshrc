@@ -46,6 +46,7 @@ compinit -i
 
 # Alias
 alias ll='ls -al'
+alias vim='nvim'
 
 
 # Add .NET Core SDK tools
