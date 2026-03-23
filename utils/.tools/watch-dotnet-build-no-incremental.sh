@@ -8,6 +8,12 @@ build_dotnet_no_incremental() {
     echo "Last build time: $(date '+%Y-%m-%d %H:%M:%S')"
 }
 
+build_dotnet() {
+    echo "Running: dotnet build"
+    dotnet build
+    echo "Last build time: $(date '+%Y-%m-%d %H:%M:%S')"
+}
+
 # Initial build
 build_dotnet_no_incremental
 
@@ -18,5 +24,6 @@ while true; do
     # Debounce (wait for possible further events)
     sleep $DEBOUNCE
     # Run build
-    build_dotnet_no_incremental
+    # build_dotnet_no_incremental
+    build_dotnet
 done
