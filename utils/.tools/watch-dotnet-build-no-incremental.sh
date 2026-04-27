@@ -1,0 +1,29 @@
+#!/bin/zsh
+
+DEBOUNCE=1      # Seconds to wait after a change before rebuilding
+
+build_dotnet_no_incremental() {
+    echo "Running: dotnet build --no-incremental"
+    dotnet build --no-incremental
+    echo "Last build time: $(date '+%Y-%m-%d %H:%M:%S')"
+}
+
+build_dotnet() {
+    echo "Running: dotnet build"
+    dotnet build
+    echo "Last build time: $(date '+%Y-%m-%d %H:%M:%S')"
+}
+
+# Initial build
+build_dotnet_no_incremental
+
+# Watch .cs files recursively and debounce rapid events
+while true; do
+    # Wait for a file event
+    fswatch -r --event Updated --event Created --event Removed --include '.*\.cs$' --exclude '.*' . | head -n 1
+    # Debounce (wait for possible further events)
+    sleep $DEBOUNCE
+    # Run build
+    # build_dotnet_no_incremental
+    build_dotnet
+done

@@ -1,0 +1,18 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+    clean = git-lfs clean -- %f
+
+
+
+# Use this config when inside any repo under ~/work/
+[includeIf "gitdir:/Volumes/Sandisk/Projects/theorem/theorem-digital/"]
+    path = /Users/prashanth/.gitconfig-work
+
+[user]
+	name = Prashanth Babu T
+    email = prashanth.t@theoreminc.net # prashanthbabu07@gmail.com
+# Use this config when inside any repo under ~/personal/
+; [includeIf "gitdir:~/prashanthbabu07/"]
+;     path = ~/.gitconfig-personal

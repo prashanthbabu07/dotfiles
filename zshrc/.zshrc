@@ -46,6 +46,7 @@ compinit -i
 
 # Alias
 alias ll='ls -al'
+alias vim='nvim'
 
 
 # Add .NET Core SDK tools
@@ -54,3 +55,6 @@ export PATH="/usr/local/sbin:$PATH"
 
 # add mason bin to PATH
 export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
+
+# add tools to PATH
+export PATH=$PATH:$HOME/.tools
