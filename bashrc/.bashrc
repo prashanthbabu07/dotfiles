@@ -52,3 +52,33 @@ fi
 
 # Add mason to PATH for mason package manager
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
+export PATH="$PATH:$HOME/.dotnet/tools"
+
+
+# Prompt
+# Load the git prompt script (Standard Arch path)
+# Ensure the git prompt script is loaded
+if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+    source /usr/share/git/completion/git-prompt.sh
+fi
+
+# Git prompt settings
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWCOLORHINTS=true
+
+# Constructing the PS1
+# \[...\] prevents line wrapping bugs
+# \u = username | \W = current folder | \e[1;...m = Bold Colors
+
+# 1. Username (Bold Green) + First Arrow (Bold Blue)
+PS1='\[\e[1;32m\]\u\[\e[0m\] \[\e[1;34m\]→\[\e[0m\] '
+
+# 2. Current Directory (Bold Blue)
+PS1+='\[\e[1;34m\]\W\[\e[0m\] '
+
+# 3. Git Branch (Bold Red) - only shows when in a git repo
+PS1+='\[\e[1;31m\]$(__git_ps1 " → (%s)")\[\e[0m\] '
+
+# 4. Final Arrow (Bold Magenta)
+PS1+='\[\e[1;35m\]→\[\e[0m\] '
