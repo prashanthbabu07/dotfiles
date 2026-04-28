@@ -65,11 +65,9 @@ fi
 
 # Git prompt settings
 export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWCOLORHINTS=true
+export GIT_PS1_SHOWCOLORHINTS=
 
-# Constructing the PS1
-# \[...\] prevents line wrapping bugs
-# \u = username | \W = current folder | \e[1;...m = Bold Colors
+
 
 # 1. Username (Bold Green) + First Arrow (Bold Blue)
 PS1='\[\e[1;32m\]\u\[\e[0m\] \[\e[1;34m\]→\[\e[0m\] '
@@ -77,8 +75,9 @@ PS1='\[\e[1;32m\]\u\[\e[0m\] \[\e[1;34m\]→\[\e[0m\] '
 # 2. Current Directory (Bold Blue)
 PS1+='\[\e[1;34m\]\W\[\e[0m\] '
 
-# 3. Git Branch (Bold Red) - only shows when in a git repo
-PS1+='\[\e[1;31m\]$(__git_ps1 " → (%s)")\[\e[0m\] '
+# 3. Git Branch (Bold Red)
+# We pass the color codes directly into the printf string of __git_ps1
+PS1+='$(__git_ps1 " \[\e[1;31m\]→ (%s)\[\e[0m\]")'
 
 # 4. Final Arrow (Bold Magenta)
-PS1+='\[\e[1;35m\]→\[\e[0m\] '
+PS1+=' \[\e[1;35m\]→\[\e[0m\] '
