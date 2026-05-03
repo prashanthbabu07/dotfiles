@@ -1,8 +1,8 @@
 @import "mocha.css";
 
 * {
-    font-family: "Adwaita Sans";
-    /* font-family: "Fira Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    /* font-family: "Adwaita Sans"; */
+    font-family: "SF Pro", "Fira Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* font-family: "FiraCode Nerd Font Mono"; */
     /* font-family: "FiraCode Nerd Font Propo"; */
     font-size: 12px;
@@ -46,7 +46,7 @@ button:hover {
 }
 
 #workspaces {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 15px;
 }
 
@@ -64,7 +64,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.4);
+    /* background-color: rgba(0, 0, 0, 0.4); */
     color: @archblue;
     font-weight: bold;
     border-radius: 15px;
@@ -97,18 +97,18 @@ button:hover {
 }
 
 #backlight {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: @archblue;
-    font-weight: bold;
+    /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
     margin: 0 1px;
 }
 
 #clock {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: @archblue;
-    font-weight: bold;
+    /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
     margin: 0 1px;
@@ -116,18 +116,18 @@ button:hover {
 }
 
 #memory {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: @archblue;
-    font-weight: bold;
+    /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
     margin: 0 1px;
 }
 
 #cpu {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: @archblue;
-    font-weight: bold;
+    /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
     margin: 0 1px;
@@ -139,9 +139,9 @@ button:hover {
 }
 
 #custom-power {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: @archblue;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding: 0 10px;
     border-radius: 15px;
     margin: 0 1px;
@@ -159,18 +159,18 @@ button:hover {
 /* } */
 
 #pulseaudio {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: @archblue;
-    font-weight: bold;
+    /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
     margin: 0 1px;
 }
 
 #network {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: @archblue;
-    font-weight: bold;
+    /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
     margin: 0 1px;
@@ -188,9 +188,9 @@ button:hover {
 #battery {
     border-radius: 15px;
     color: @archblue;
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     /* padding: 0 10px; */
-    font-weight: bold;
+    /* font-weight: bold; */
     margin: 0 1px;
     /* color: @green; */
     /* border-bottom: 2px solid @green; */
@@ -214,12 +214,12 @@ button:hover {
 }
 
 #bluetooth {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     color: #ffffff;
     padding: 0 10px;
     border-radius: 15px;
     margin: 0 1px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 #bluetooth.disabled {
