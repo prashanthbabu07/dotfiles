@@ -14,6 +14,7 @@
 
 window#waybar {
     background: transparent;
+    color: @foreground;
     /* background-color: @crust; */
     /* color: @overlay0; */
     transition-property: background-color;
@@ -65,7 +66,7 @@ button:hover {
 
 #workspaces button.active {
     /* background-color: rgba(0, 0, 0, 0.4); */
-    color: @archblue;
+    color: @foreground;
     font-weight: bold;
     border-radius: 15px;
     /* background-color:  */
@@ -98,7 +99,7 @@ button:hover {
 
 #backlight {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @archblue;
+    color: @foreground;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -107,7 +108,7 @@ button:hover {
 
 #clock {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @archblue;
+    color: @foreground;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -117,7 +118,7 @@ button:hover {
 
 #memory {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @archblue;
+    color: @foreground;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -126,7 +127,7 @@ button:hover {
 
 #cpu {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @archblue;
+    color: @foreground;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -140,7 +141,7 @@ button:hover {
 
 #custom-power {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @archblue;
+    color: @foreground;
     /* font-weight: bold; */
     padding: 0 10px;
     border-radius: 15px;
@@ -160,7 +161,7 @@ button:hover {
 
 #pulseaudio {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @archblue;
+    color: @foreground;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -169,7 +170,7 @@ button:hover {
 
 #network {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @archblue;
+    color: @foreground;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -187,7 +188,7 @@ button:hover {
 
 #battery {
     border-radius: 15px;
-    color: @archblue;
+    color: @foreground;
     /* background-color: rgba(0, 0, 0, 0.6); */
     /* padding: 0 10px; */
     /* font-weight: bold; */
@@ -231,7 +232,7 @@ button:hover {
 }
 
 #bluetooth.on {
-    color: @archblue; /* Green for on */
+    color: @foreground; /* Green for on */
 }
 
 #bluetooth.connected {
