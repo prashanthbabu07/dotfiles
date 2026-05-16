@@ -2,7 +2,8 @@
 
 * {
     /* font-family: "Adwaita Sans"; */
-    font-family: "SF Pro", "Fira Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: "SF Pro", "Fira Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    /* font-family: "SF Mono", "SF Pro", "Fira Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
     /* font-family: "FiraCode Nerd Font Mono"; */
     /* font-family: "FiraCode Nerd Font Propo"; */
     font-size: 12px;
@@ -14,7 +15,7 @@
 
 window#waybar {
     background: transparent;
-    color: @foreground;
+    color: @archblue;
     /* background-color: @crust; */
     /* color: @overlay0; */
     transition-property: background-color;
@@ -66,7 +67,7 @@ button:hover {
 
 #workspaces button.active {
     /* background-color: rgba(0, 0, 0, 0.4); */
-    color: @foreground;
+    color: @archblue;
     font-weight: bold;
     border-radius: 15px;
     /* background-color:  */
@@ -99,7 +100,7 @@ button:hover {
 
 #backlight {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @foreground;
+    color: @archblue;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -108,7 +109,7 @@ button:hover {
 
 #clock {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @foreground;
+    color: @archblue;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -118,7 +119,7 @@ button:hover {
 
 #memory {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @foreground;
+    color: @archblue;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -127,7 +128,7 @@ button:hover {
 
 #cpu {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @foreground;
+    color: @archblue;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -141,7 +142,7 @@ button:hover {
 
 #custom-power {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @foreground;
+    color: @archblue;
     /* font-weight: bold; */
     padding: 0 10px;
     border-radius: 15px;
@@ -161,7 +162,7 @@ button:hover {
 
 #pulseaudio {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @foreground;
+    color: @archblue;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -170,7 +171,7 @@ button:hover {
 
 #network {
     /* background-color: rgba(0, 0, 0, 0.6); */
-    color: @foreground;
+    color: @archblue;
     /* font-weight: bold; */
     /* padding: 0 10px; */
     border-radius: 15px;
@@ -188,7 +189,7 @@ button:hover {
 
 #battery {
     border-radius: 15px;
-    color: @foreground;
+    color: @archblue;
     /* background-color: rgba(0, 0, 0, 0.6); */
     /* padding: 0 10px; */
     /* font-weight: bold; */
@@ -232,7 +233,7 @@ button:hover {
 }
 
 #bluetooth.on {
-    color: @foreground; /* Green for on */
+    color: @archblue; /* Green for on */
 }
 
 #bluetooth.connected {
