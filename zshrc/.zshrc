@@ -20,6 +20,25 @@ export HISTSIZE=10000000
 export SAVEHIST=10000000
 export HISTFILESIZE=10000000
 
+# To activate these completions, add the following to your .zshrc:
+#
+#   if type brew &>/dev/null; then
+#     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+#
+#     autoload -Uz compinit
+#     compinit
+#   fi
+#
+# You may also need to force rebuild `zcompdump`:
+#
+#   rm -f ~/.zcompdump; compinit
+#
+# Additionally, if you receive "zsh compinit: insecure directories" warnings when attempting
+# to load these completions, you may need to run these commands:
+#
+#   chmod go-w '/usr/local/share'
+#   chmod -R go-w '/usr/local/share/zsh'
+
 # brew completions
 if type brew &>/dev/null; then
 	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
