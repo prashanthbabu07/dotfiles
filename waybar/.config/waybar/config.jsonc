@@ -1,96 +1,97 @@
 {
-    "position": "top",
-    "modules-left": ["custom/archicon", "hyprland/workspaces"],
-    // "modules-center": ["hyprland/window"],
-    // add display brightness module
-    "modules-right": [
-        "network",
-        "bluetooth",
-        "pulseaudio",
-        "backlight",
-        "battery",
-        "cpu",
-        "memory",
-        "clock",
-        "custom/power",
-    ],
-    "hyprland/workspaces": {
-        "persistent-workspaces": {
-            "*": [1, 2, 3, 4, 5]
-        }
+  "position": "top",
+  // "modules-left": ["custom/archicon", "hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces"],
+  // "modules-center": ["hyprland/window"],
+  // add display brightness module
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "cpu",
+    "memory",
+    "clock",
+    "custom/power",
+  ],
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5],
     },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "<span size='13000'>{icon} </span>{percent}%",
-        // "format-icons": ["", ""],
-        "tooltip": false,
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "<span size='13000'>{icon} </span>{percent}%",
+    // "format-icons": ["", ""],
+    "tooltip": false,
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+  },
+  "bluetooth": {
+    "format": "<span size='12000'></span> {status}",
+    "format-disabled": "<span size='12000'></span> OFF",
+    "format-off": "<span size='12000'></span> OFF",
+    "format-on": "<span size='12000'></span> ON",
+    "on-click": "blueman-manager", // Opens Blueman manager on click
+    // "on-click-right": "bluetoothctl power toggle", // Toggles Bluetooth power on right click
+    // "on-click-right": "bash -c 'bluetoothctl power status | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on'",
+  },
+  "clock": {
+    "format": "{:%a %d %I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    // "tooltip-format": "<span>{calendar}</span>",
+    "calendar": {
+      "format": {
+        "today": "<span color='#ffcc66'><b>{}</b></span>",
+      },
     },
-    "bluetooth": {
-        "format": "<span size='12000'></span> {status}",
-        "format-disabled": "<span size='12000'></span> OFF",
-        "format-off": "<span size='12000'></span> OFF",
-        "format-on": "<span size='12000'></span> ON",
-        "on-click": "blueman-manager", // Opens Blueman manager on click
-        // "on-click-right": "bluetoothctl power toggle", // Toggles Bluetooth power on right click
-        // "on-click-right": "bash -c 'bluetoothctl power status | grep -q \"Powered: yes\" && bluetoothctl power off || bluetoothctl power on'",
+  },
+  "custom/archicon": {
+    "format": "<span size='11000' foreground='#1793d1'>  </span>",
+    "tooltip": false,
+    "on-click": "wofi --show drun",
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
     },
-    "clock": {
-        "format": "{:%a %d %I:%M %p}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        // "tooltip-format": "<span>{calendar}</span>",
-        "calendar": {
-            "format": {
-                "today": "<span color='#ffcc66'><b>{}</b></span>",
-            },
-        },
+    "format": "<span size='12000'>{icon} </span>{capacity}%",
+    "format-warning": "<span size='13000'>{icon} </span> {capacity}%",
+    "format-critical": "<span size='13000'>{icon} </span> {capacity}%",
+    "format-charging": "<span size='11000'> </span>{capacity}%",
+    "format-plugged": "<span size='12000'></span> {capacity}%",
+    "format-alt": "<span size='13000'>{icon} </span> {time}",
+    "format-full": "<span size='12000'> </span>{capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{time}",
+  },
+  "network": {
+    // "format-wifi": "<span size='10240'> </span> {essid}",
+    "format-wifi": "<span size='10240'> </span>",
+    "format-ethernet": "<span size='10240'>󰤭 </span> Disconnected",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "<span size='10240'> </span>Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%\n {ipaddr}",
+  },
+  "pulseaudio": {
+    "format": "<span size='11000'>{icon} </span>{volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", ""],
     },
-    "custom/archicon": {
-        "format": "<span size='11000' foreground='#1793d1'>  </span>",
-        "tooltip": false,
-        "on-click": "wofi --show drun",
-    },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15,
-        },
-        "format": "<span size='12000'>{icon} </span>{capacity}%",
-        "format-warning": "<span size='13000'>{icon} </span> {capacity}%",
-        "format-critical": "<span size='13000'>{icon} </span> {capacity}%",
-        "format-charging": "<span size='11000'> </span>{capacity}%",
-        "format-plugged": "<span size='12000'></span> {capacity}%",
-        "format-alt": "<span size='13000'>{icon} </span> {time}",
-        "format-full": "<span size='12000'> </span>{capacity}%",
-        "format-icons": ["", "", "", "", ""],
-        "tooltip-format": "{time}",
-    },
-    "network": {
-        // "format-wifi": "<span size='10240'> </span> {essid}",
-        "format-wifi": "<span size='10240'> </span>",
-        "format-ethernet": "<span size='10240'>󰤭 </span> Disconnected",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "<span size='10240'> </span>Disconnected",
-        "tooltip-format-wifi": "Signal Strenght: {signalStrength}%\n {ipaddr}",
-    },
-    "pulseaudio": {
-        "format": "<span size='11000'>{icon} </span>{volume}%",
-        "format-muted": "",
-        "format-icons": {
-            "default": ["", "", ""],
-        },
-        "on-click": "pavucontrol",
-    },
-    "cpu": {
-        "format": "<span size='10240'> </span>{usage}%", // Example: displays an icon and CPU usage percentage
-    },
-    "memory": {
-        "format": "<span size='10240'> </span><span>{used}GB</span>/{total}GB", // Example: displays used and total RAM in GB
-    },
-    "custom/power": {
-        "format": "<span size='14000'>⏻</span>",
-        "tooltip": "Power Menu",
-        "on-click": "~/.config/waybar/scripts/power_menu.sh",
-        "interval": 3600,
-    },
+    "on-click": "pavucontrol",
+  },
+  "cpu": {
+    "format": "<span size='10240'> </span>{usage}%", // Example: displays an icon and CPU usage percentage
+  },
+  "memory": {
+    "format": "<span size='10240'> </span><span>{used}GB</span>/{total}GB", // Example: displays used and total RAM in GB
+  },
+  "custom/power": {
+    "format": "<span size='14000'>⏻</span>",
+    "tooltip": "Power Menu",
+    "on-click": "~/.config/waybar/scripts/power_menu.sh",
+    "interval": 3600,
+  },
 }
