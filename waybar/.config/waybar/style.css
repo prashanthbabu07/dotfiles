@@ -238,4 +238,5 @@ button:hover {
 
 #bluetooth.connected {
     color: @green; /* Purple for connected */
+    font-weight: bold;
 }
